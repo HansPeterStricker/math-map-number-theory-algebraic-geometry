@@ -40,8 +40,9 @@
     "kategorie"]);
 
   // Code keys under which some files hold lists or tables of objects with visible texts
-  // (AG.methods, AR.methods, GREAT_PROBLEMS.lists, GREAT_PROBLEMS.status).
-  const ALSO_LISTS = new Set(["methods", "lists", "status", "kinds"]);
+  // (AG.methods, AR.methods, GREAT_PROBLEMS.lists, GREAT_PROBLEMS.status; AREA_TEXTS.provinces holds the texts of the
+  // provinces, while `provinces` of map 1830 is a list of keys).
+  const ALSO_LISTS = new Set(["methods", "lists", "status", "kinds", "provinces"]);
 
   // Keys under which, depending on the file, there is either a code (lowercase, without spaces, e.g. `hoehen`) or a
   // visible
