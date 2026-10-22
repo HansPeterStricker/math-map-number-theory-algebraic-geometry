@@ -2724,7 +2724,11 @@
     const k = k0 * z, x = cx + (sx - Wv / 2) / k, y = cy + (sy - Hv / 2) / k;
     if (!onLand(x, y)) return null;
     const q = groundHints.find((g) => inPolygon(g.poly, x, y));
-    return q ? q.hint : null;
+    // User, 2026-10-23: a province whose name is shown has its box only on the name, not on its ground. Its name is the
+    // name of the province, or the country name of a country with only this province, or the name of the condominium.
+    const named = (o) => o.an && o.forest == null && (o.country ? o.provKey === q.hint.area || o.areaKey === q.hint.area : o.areaKey === q.hint.area);
+    if (!q || regions.some(named)) return null;
+    return q.hint;
   }
   const hintAt = (target, x, y) => { const t = search(hint, target); return t || (target && svg.contains(target) ? groundHint(x, y) : null); };
   // Plan step 2.2: hover box of a tree: name, the province (and forest), the definition in one sentence
