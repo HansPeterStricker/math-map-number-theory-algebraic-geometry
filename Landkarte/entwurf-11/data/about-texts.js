@@ -1,18 +1,18 @@
 // Todo B74, part 1: texts of the overlay "About" of draft 11 (questions and answers, English only like the map).
-// Assignment: Berichte/2026-10-22 B74 Hintergrundinformationen/Auftrag.md; German reading version with the same sources:
-// Berichte/2026-10-22 B74 Hintergrundinformationen/Texte.md.
+// Assignment: reports/2026-10-22 B74 Hintergrundinformationen/Auftrag.md; German reading version with the same sources:
+// reports/2026-10-22 B74 Hintergrundinformationen/Texte.md.
 // Format: window.E11_ABOUT = [{ q, a }], `a` is simple HTML (paragraphs only). The comment above each entry names the
 // files and reports every statement rests on. Numbers counted on 22 October 2026 from what draft 11 draws
-// (window.E11.symbols() in index.html: 404 elements) and from entwurf-11-modell.js (proofs, concepts, hidden
+// (window.E11.symbols() in index.html: 404 elements) and from scripts/model.js (proofs, concepts, hidden
 // nodes); recount them when the theorem graphs change.
-// Classic script; loaded before about.js (part 2).
+// Classic script; loaded before scripts/about.js (part 2).
 (function () {
   "use strict";
   window.E11_ABOUT = [
     // Sources: CLAUDE.md (project idea, working title); counts from window.E11.symbols(): 312 theorems (kind berg),
     // 42 open conjectures (gipfel 38 + bedingt 4), 6 refuted conjectures (trugbild), 31 theories (gebaeude), 13 bridges;
-    // countries and provinces: entwurf-11-raster-daten.js (62 provinces in 20 MSC main fields); glossary (GLOSSAR.md,
-    // sprache/GLOSSAR.md: area, subarea); intro.js, card 1 and 4.
+    // countries and provinces: data/layout.js (62 provinces in 20 MSC main fields); glossary (GLOSSAR.md,
+    // sprache/GLOSSAR.md: area, subarea); scripts/intro.js, card 1 and 4.
     {
       q: "What is this map?",
       a: "<p>This map shows a part of mathematics as a landscape: number theory, algebraic geometry and some neighbouring " +
@@ -23,8 +23,8 @@
         "A click on a theorem shows which other theorems its proof uses.</p>",
     },
     // Sources: GLOSSAR.md, section 2 (building, building with a question mark, ruin, city, bridge, fjord, route);
-    // GLOSSAR.md, section 1 (theory, correspondence); draft-11-map.js (counterexample of a ruin shown in its info box,
-    // plan 4.5 follow-up 3; bridge stages fertig/bauplan); Beispiel Arithmetische Geometrie/daten.js, header comment on
+    // GLOSSAR.md, section 1 (theory, correspondence); scripts/map-page.js (counterexample of a ruin shown in its info box,
+    // plan 4.5 follow-up 3; bridge stages fertig/bauplan); graphs/arithmetic-geometry/daten.js, header comment on
     // `correspondence` (Galois side 11R, 11S; automorphic side 11F, 22E); city names: theories of type "grundlage" drawn
     // on the map (ag:G_KOH sheaf cohomology, ar:G_IWA Iwasawa theory).
     {
@@ -39,9 +39,9 @@
         "representations on one bank and automorphic forms on the other. A finished bridge has been proved; a construction " +
         "plan in dashed lines is only conjectured.</p>",
     },
-    // Sources: Beispiel Algebraische Geometrie/daten.js, comment "Granularity" before window.AG; daten-gross.js, header
-    // (168 nodes, same granularity); Beispiel Arithmetische Geometrie/README.md and daten.js, header (three conjectures);
-    // reports Berichte/2026-10-20 B41 Klassenkörpertheorie and Berichte/2026-10-20 B24 Langlands-Brücke (added parts);
+    // Sources: graphs/algebraic-geometry/daten.js, comment "Granularity" before window.AG; daten-gross.js, header
+    // (168 nodes, same granularity); graphs/arithmetic-geometry/README.md and daten.js, header (three conjectures);
+    // reports reports/2026-10-20 B41 Klassenkörpertheorie and reports/2026-10-20 B24 Langlands-Brücke (added parts);
     // sources lists in the headers of daten.js and daten-gross.js; READMEs of both folders, section "Hinweis" /
     // "Fachliche Unsicherheiten" (compiled with a language model, not reviewed); git log: every commit of the project
     // is co-authored by Claude.
@@ -58,11 +58,11 @@
         "Hartshorne's <i>Algebraic Geometry</i> and Silverman's <i>The Arithmetic of Elliptic Curves</i>. It is a first " +
         "selection for a draft, neither complete nor balanced, and no expert has reviewed it yet.</p>",
     },
-    // Sources: header comments of Beispiel Algebraische Geometrie/daten.js ("proofs": hyperedges, AND/OR; "Granularity":
+    // Sources: header comments of graphs/algebraic-geometry/daten.js ("proofs": hyperedges, AND/OR; "Granularity":
     // only premises actually used, the rest in a foundation node or the proof idea) and daten-gross.js; GLOSSAR.md
-    // (Beweis, Prämisse, Bedingter Beweis, Beweispunkt); draft-11-map.js (shown proof: first in historical order,
-    // function baseShown; hollow proof points); entwurf-11-modell.js: 398 proofs, 21 of kind "bedingt"; test-b52a.js
-    // (a conditional proof is drawn like every other route); Beispiel Arithmetische Geometrie/README.md, section
+    // (Beweis, Prämisse, Bedingter Beweis, Beweispunkt); scripts/map-page.js (shown proof: first in historical order,
+    // function baseShown; hollow proof points); scripts/model.js: 398 proofs, 21 of kind "bedingt"; test-b52a.js
+    // (a conditional proof is drawn like every other route); graphs/arithmetic-geometry/README.md, section
     // "Quellen" (compiled from memory, not checked against the sources one by one).
     {
       q: "How were the dependencies between proofs determined?",
@@ -76,9 +76,9 @@
         "arithmetic geometry the data state that the details were compiled from memory and not checked against these sources " +
         "one by one.</p>",
     },
-    // Wording of the question fixed by the user (22 October 2026, via the coordinator). Sources: draft-11-map.js,
-    // function meaning() (weight = direct users, n.users in entwurf-11-modell.js; raised by `highlights` and `large`;
-    // level 1 to 4) and the drawing of the building levels (plan step 4.5, building-symbols.js); Große Sätze und
+    // Wording of the question fixed by the user (22 October 2026, via the coordinator). Sources: scripts/map-page.js,
+    // function meaning() (weight = direct users, n.users in scripts/model.js; raised by `highlights` and `large`;
+    // level 1 to 4) and the drawing of the building levels (plan step 4.5, scripts/building-symbols.js); Große Sätze und
     // Vermutungen/ (table referenced by the field `large`); GLOSSAR.md, Gebäude (storeys, annexes, wings by level).
     // Details of the computation are left out on purpose (user, via the coordinator).
     {
@@ -90,11 +90,11 @@
         "out. Larger buildings also have more storeys, annexes and wings.</p>" +
         "<p>Because only proofs on this map are counted, the size depends on which theorems the map contains.</p>",
     },
-    // Sources: entwurf-11-modell.js, header (province = first MSC class, condominium 11G/14G); daten.js headers (MSC
+    // Sources: scripts/model.js, header (province = first MSC class, condominium 11G/14G); daten.js headers (MSC
     // classes are estimates, not taken from zbMATH); PLAN.html, theme 1 (objective: sum of route lengths, small terms,
-    // hard conditions, decision E1 on orientation); Landkarte/scripts/start-layout.js and raster-layout.js, header
+    // hard conditions, decision E1 on orientation); maps/tools/start-layout.js and raster-layout.js, header
     // comments (method; target area per province from its elements); Plan 1.6 report and B70 report (11M at the inner
-    // end of the fjord); Landkarte/scripts/place-elements.js, header (positions inside a province: short routes, even
+    // end of the fjord); maps/tools/place-elements.js, header (positions inside a province: short routes, even
     // spacing).
     {
       q: "How were the areas arranged?",
@@ -110,7 +110,7 @@
         "subarea of zeta and L-functions lies at the inner end of the fjord. Inside each subarea a second program placed the " +
         "buildings so that the routes are short and the buildings are evenly spread.</p>",
     },
-    // Sources: intro.js, card 6 (contents of the info box); Landkarte/scripts/area-texts.js, header (descriptions of
+    // Sources: scripts/intro.js, card 6 (contents of the info box); maps/entwurf-10/data/area-texts.js, header (descriptions of
     // areas and subareas, one well-known example), tests/test-area-hover.js (shown when hovering over a subarea);
     // GLOSSAR.md (Kurzfassung, Formel) and CLAUDE.md (formulas without quantifiers, todo B26); sprache/README.md
     // (data stay German and are translated to English); git log (every commit co-authored by Claude); daten.js headers
@@ -126,9 +126,9 @@
         "<p>The texts have not been checked systematically by an expert. In particular, the years in the histories were " +
         "taken from general knowledge and have not yet been checked against sources.</p>",
     },
-    // Sources: Beispiel Algebraische Geometrie/README.md, section "Hinweis"; Beispiel Arithmetische Geometrie/README.md,
+    // Sources: graphs/algebraic-geometry/README.md, section "Hinweis"; graphs/arithmetic-geometry/README.md,
     // sections "Fachliche Unsicherheiten" and "Quellen"; daten.js headers (years, MSC estimates; AI proofs: kind
-    // "beansprucht", nodes with `ki`); entwurf-11-modell.js, header and hiddenSet (5 AI nodes, 4 claimed proofs hidden).
+    // "beansprucht", nodes with `ki`); scripts/model.js, header and hiddenSet (5 AI nodes, 4 claimed proofs hidden).
     {
       q: "How reliable is the content?",
       a: "<p>The content was compiled with the help of an AI model and has not yet been reviewed by an expert. This applies to " +
@@ -139,9 +139,9 @@
         "experts have not confirmed; the results concerned are left out of the map.</p>" +
         "<p>Before the map is used as a reference, people with expert knowledge of these fields should review the data.</p>",
     },
-    // Sources: entwurf-11-raster-daten.js (20 main fields: 11, 14 and 18 others); PLAN.html (theme 2, trees and
+    // Sources: data/layout.js (20 main fields: 11, 14 and 18 others); PLAN.html (theme 2, trees and
     // definitions deferred, step 2.3 resting; steps 3.2 and 3.3 deferred, todo B72; step 3.1 accepted);
-    // test-concepts-model.js (269 concepts); draft-11-map.js (TREES_ENABLED, NETWORK_SHOWN, PROGRAMMES_SHOWN false;
+    // test-concepts-model.js (269 concepts); scripts/map-page.js (TREES_ENABLED, NETWORK_SHOWN, PROGRAMMES_SHOWN false;
     // programme "Geometrie über dem Körper mit einem Element" not drawn); READMEs of the example folders (review).
     {
       q: "What is still missing?",

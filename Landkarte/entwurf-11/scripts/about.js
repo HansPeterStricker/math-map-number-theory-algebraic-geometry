@@ -1,9 +1,9 @@
 // Todo B74: background information of draft 11 ("About") in a dialog of its own over the map, in the style of the
-// introduction (intro.js). The questions and answers stand in about-texts.js (window.E11_ABOUT), which is loaded before
+// introduction (scripts/intro.js). The questions and answers stand in data/about-texts.js (window.E11_ABOUT), which is loaded before
 // this file. Each question is a <details> element: a click on the question opens or closes its answer.
 // Opening rules: the dialog never opens by itself; the button "About" in the toolbar opens it, and ?about=1 in the address
 // opens it once the map is drawn (body[data-bereit="1"]). Closing: ×, Esc, a click beside the dialog.
-// Classic script, loaded after draft-11-map.js and intro.js; works over file:// as well.
+// Classic script, loaded after scripts/map-page.js and scripts/intro.js; works over file:// as well.
 (function () {
   "use strict";
   const ITEMS = Array.isArray(window.E11_ABOUT) ? window.E11_ABOUT : [];
@@ -48,7 +48,7 @@
   back.addEventListener("click", (e) => { if (e.target === back) close(); });   // click on the darkened area
 
   // Keys: Esc closes, Tab stays in the dialog; no other key reaches the map while the dialog is open. Captured on window
-  // before the map's own handler on document (as in intro.js).
+  // before the map's own handler on document (as in scripts/intro.js).
   window.addEventListener("keydown", (e) => {
     if (back.hidden) return;
     if (e.key === "Escape") {

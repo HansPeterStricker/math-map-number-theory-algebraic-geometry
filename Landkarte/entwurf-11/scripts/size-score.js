@@ -1,11 +1,11 @@
-// Own copy of Landkarte/scripts/size-score.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
+// Own copy of maps/shared_scripts/size-score.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
 // for draft 12 do not change draft 11. Do not change this file.
 // B49: importance and size of the map elements of draft 8, shared by the map (draft-8-zoom.js) and the settings page
 // (settings.js). Classic script; works over file:// and in Node (module.exports).
 //
-// Inputs: the model nodes (entwurf-7-modell.js), the raw data (window.AG, AG_LARGE, AR) for the field `large`, the
-// table of great theorems (window.GREAT_PROBLEMS, optional), the settings (window.SIZE_SETTINGS, bedeutung.js) and
-// the literature scores (window.SIZE_LITERATURE, bedeutung-literatur.js, optional).
+// Inputs: the model nodes (regional-model.js), the raw data (window.AG, AG_LARGE, AR) for the field `large`, the
+// table of great theorems (window.GREAT_PROBLEMS, optional), the settings (window.SIZE_SETTINGS, data/weights.js) and
+// the literature scores (window.SIZE_LITERATURE, weights-literature.js, optional).
 //
 // For every node:
 //   a  data score: percentile of `value` within the group (theorem, conjecture, theory); mid rank for ties.

@@ -1,7 +1,7 @@
 // Draft 11: copy of draft-10-bridge.js of draft 10 (22 October 2026, user's decision; draft 10 stays unchanged as a
 // reference). Draft 10 was the map of draft 8 in the sea, with an irregular coast, a fjord between the two sides of the
 // Langlands correspondence and bridges over it (todo B24 b); additions of draft 10 to draft 8 are marked "draft 10".
-// Layout: entwurf-11-raster-daten.js (plan steps 1.3 to 1.5); the layout before plan step 1.2 is not offered any more.
+// Layout: data/layout.js (plan steps 1.3 to 1.5); the layout before plan step 1.2 is not offered any more.
 (function () {
   "use strict";
   const T = window.TM, { el, text, f, INK, PAPER, RED } = T, L = window.E7_LAYOUT, K0 = L.mapData;
@@ -37,7 +37,7 @@
   const NET_WIDTH = [0, 2.6, 1.9, 1.35, 1], NET_OPACITY = 0.45;
   // Route network deferred by the user, 2026-10-22 (plan step 3.2 cancelled, topic 3 deferred): with NETWORK_SHOWN false the
   // switch "dependencies" is hidden and off, an=netz in the address is ignored, there is no legend row, and the page does
-  // not load entwurf-11-wegenetz-daten.js; the code that draws the whole network is kept.
+  // not load data/route-network.js; the code that draws the whole network is kept.
   const NETWORK_SHOWN = false;
   const LIGHT = "#efe3c2", REF = 10, P = 0.45, Z_MIN = 0.02, Z_MAX = 16, Z_ZERO = 8, N_TOTAL = 30, MARGIN = 34;
   const stage = document.getElementById("buehne"), svg = document.getElementById("karte"), paper = document.getElementById("papier");
@@ -759,7 +759,7 @@
   const E = [], EK = {};
   const quantile = (arr, p) => { const a = arr.slice().sort((x, y) => x - y); return a[Math.floor(p * (a.length - 1))]; };
   // Returns { w, we, s, zA, level } per key. Todo B73: zA from the formula below (N_TOTAL, Z_ZERO and the covering rule) is
-  // only the threshold of the bridges and the estimate that Landkarte/scripts/place-elements.js uses for the layout; the
+  // only the threshold of the bridges and the estimate that maps/tools/place-elements.js uses for the layout; the
   // page replaces it for every other element by computeThresholds (as early as there is room for symbol and name)
   function meaning(m) {
     const value = MEASURES[m].value, raw = nodes.map(value), q75 = quantile(raw, 0.75), q90 = quantile(raw, 0.9), q97 = quantile(raw, 0.97);
@@ -833,7 +833,7 @@
   const shortName = (n) => MAP_NAME_SHORT[n.key] || (MAP_NAME_KEEP.has(n.key) ? n.name : mapName(n.name));
   const hint = new WeakMap(), selectable = new WeakMap();
   // Plan step 4.5 (user, 2026-10-22): buildings, ruins and cities after the approved sketches; the drawings are those
-  // of Landkarte/scripts/building-symbols.js (window.SKETCH_SYMBOLS, hip-roof line B; copy of the sketch of 22 October 2026). A theorem is a building of its stage
+  // of maps/shared_scripts/building-symbols.js (window.SKETCH_SYMBOLS, hip-roof line B; copy of the sketch of 22 October 2026). A theorem is a building of its stage
   // (levels 4 to 1: storeys, annex, side and rear wings; thin lines, no towers, no domes), an open conjecture (every state
   // except "widerlegt" and "programm") the same building with a question mark above it, a refuted conjecture a ruin (the
   // roof has broken off, no rubble, no cairn), a theory a city (small houses staggered in depth, one or two towers; the
@@ -1275,7 +1275,7 @@
   // hyperedges of the theorem graphs; a single proof with a single premise is a direct route (todo B29). Lines,
   // direction chevrons, arrowheads and proof points are computed in screen coordinates for each frame, so that points
   // and arrows keep the same size and distance from the mountain at every zoom level.
-  // Plan step 3.2: bundled route network of plan step 3.1 (entwurf-11-wegenetz-daten.js, variant 4: no rule for pairs,
+  // Plan step 3.2: bundled route network of plan step 3.1 (data/route-network.js, variant 4: no rule for pairs,
   // lines in opposite directions bundled as well), drawn only as a whole under the switch "dependencies". With a selected
   // theorem the routes stay direct, slightly curved lines as before (user, 2026-10-22) and the network is hidden.
   const NET = window.E11_ROUTE_NETWORK || { nodes: [], pieces: [], lines: [] };
@@ -1532,7 +1532,7 @@
   // without fill, a bridge under construction solid ends and a dashed middle. The width of the deck and of the wing
   // walls grows with the importance of the correspondence (the same size as its mountain would have); like mountains,
   // bridges appear from the zoom level that their importance gives. Drawn in screen coordinates for each frame.
-  // Width of the deck by importance (user, 2026-10-20): the B49 size measure (size-score.js with bedeutung.js, as for
+  // Width of the deck by importance (user, 2026-10-20): the B49 size measure (scripts/size-score.js with data/weights.js, as for
   // the mountains of draft 8), normalised weight w in [0, 1], gives a deck of 11 to 20 px; a construction plan is
   // somewhat wider than the widest finished bridge, so that the names on the decks stay readable
   const DECK_MIN = 5.5, DECK_MAX = 10;
@@ -2153,8 +2153,8 @@
   const FLAGS = { grundlegend: "besonders wichtig", staunen: "erstaunlich", zusammenhang: "schön", verstehen: "erst nach dem Verstehen erstaunlich", einfach: "einfach zu verstehen",
     klassifikation: "Klassifikationssatz" };
   Object.keys(FLAGS).forEach((a) => (FLAGS[a] = U(FLAGS[a])));
-  const AG_PATH = "../../Beispiel%20Algebraische%20Geometrie/", AR_PATH = "../../Beispiel%20Arithmetische%20Geometrie/";
-  const LARGE_PATH = "../../Gro%C3%9Fe%20S%C3%A4tze%20und%20Vermutungen/index.html", GALLERY_PATH = "../../Mathematical%20Wonder/index.html";
+  const AG_PATH = "../../graphs/algebraic-geometry/", AR_PATH = "../../graphs/arithmetic-geometry/";
+  const LARGE_PATH = "../../playground/Gro%C3%9Fe%20S%C3%A4tze%20und%20Vermutungen/index.html", GALLERY_PATH = "../../playground/Mathematical%20Wonder/index.html";
 
   // ------------------------------------------------------------ Proof order and stages (todos B21 and B30)
   // Proofs of a theorem in historical order: the year of a proof is the earliest year of a history event that names
@@ -2690,7 +2690,7 @@
     if (n.formula && window.katex) h += tex(n.formula);
     return h;
   }
-  // Box for a country or province (todos B40, B60): summary from area-texts.js, no MSC codes (todo B60). A country name
+  // Box for a country or province (todos B40, B60): summary from data/area-texts.js, no MSC codes (todo B60). A country name
   // shows the name of the country; a province (its name or its free ground) shows the country above, a little smaller
   // (both countries for the condominium), then the name of the province.
   const AT = window.AREA_TEXTS || { countries: {}, provinces: {} };

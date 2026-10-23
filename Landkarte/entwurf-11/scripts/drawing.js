@@ -1,4 +1,4 @@
-// Own copy of Landkarte/scripts/werkzeuge.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
+// Own copy of maps/shared_scripts/drawing.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
 // for draft 12 do not change draft 11. Do not change this file.
 // Shared drawing functions of Terra Mathematica (from draft 2 on).
 // Older drafts contain their own copies and are not converted.

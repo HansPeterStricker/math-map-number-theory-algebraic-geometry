@@ -1,8 +1,8 @@
 // Draft 11 (copy of entwurf-10-modell.js of draft 10, 22 October 2026). Draft 10: model of the map (own copy of
-// entwurf-7-modell.js, plan step 2.1, user's decision of 2026-10-21).
-// Drafts 7 and 8 are frozen and keep loading entwurf-7-modell.js, which stays unchanged. This copy is loaded by
+// regional-model.js, plan step 2.1, user's decision of 2026-10-21).
+// Drafts 7 and 8 are frozen and keep loading regional-model.js, which stays unchanged. This copy is loaded by
 // index.html (window.E11_MODEL) and by the Node scripts for draft 11 (tests/measure-layout.js,
-// tests/test-concepts-model.js). Differences from entwurf-7-modell.js: the concepts (definitions) are merged into the
+// tests/test-concepts-model.js). Differences from regional-model.js: the concepts (definitions) are merged into the
 // model, the provinces of concepts without a province of their own are added, and the forests are computed (see the
 // section "Concepts" below). The theorem part is the same code, so the elements and their keys are the same as in
 // draft 7.
@@ -415,7 +415,7 @@
 // entry), approved, nameBy (concept that gives the name).
   const FOREST_MIN = 5;
   // Names of the forests (plan step 2.2), after the proposal in section 4 of the report
-  // Berichte/2026-10-21 Plan 2.1 Begriffsdaten/Bericht Datenteil.md; approved by the user on 22 October 2026. A name is given
+  // reports/2026-10-21 Plan 2.1 Begriffsdaten/Bericht Datenteil.md; approved by the user on 22 October 2026. A name is given
   // via one concept of the forest (the index of a forest changes when forests grow or new ones appear): the forest that
   // contains the concept gets the name. de: German name (data language), en: English name (draft 11 is English only).
   const FOREST_NAMES = {

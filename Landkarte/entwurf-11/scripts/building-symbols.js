@@ -1,11 +1,11 @@
-// Own copy of Landkarte/scripts/building-symbols.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
+// Own copy of maps/shared_scripts/building-symbols.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
 // for draft 12 do not change draft 11. Do not change this file.
 // Copy of 22 October 2026 for draft 11 and place-elements.js (plan step 4.5, decision of the user): the source is the
-// sketch Landkarte/skizzen/building-symbols.js (sketches of plan step 4.3); changes to the sketch no longer affect the
+// sketch maps/skizzen/building-symbols.js (sketches of plan step 4.3); changes to the sketch no longer affect the
 // map. Change the drawings of the map here. Original head comment:
 // Shared symbols of the sketches for plan step 4.3 (drafts only, decisions 4.1 pending): buildings in four stages,
 // ruin, open conjecture (building with a question mark), city, hill range and programme of draft 10, provisional
-// tree. Used by buildings-and-cities.js and bridges.js; exposes window.SKETCH_SYMBOLS. Loads after ../scripts/werkzeuge.js.
+// tree. Used by buildings-and-cities.js and bridges.js; exposes window.SKETCH_SYMBOLS. Loads after ../shared_scripts/drawing.js.
 window.SKETCH_SYMBOLS = (function () {
   "use strict";
   const T = window.TM, { el, text, f, INK, PAPER } = T, LIGHT = "#efe3c2";

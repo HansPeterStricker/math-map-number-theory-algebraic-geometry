@@ -1,6 +1,6 @@
 // Todo B46: introduction to draft 11 as a carousel of seven cards over the map (plan in
-// Berichte/2026-10-22 B46 Einführungskarte Plan/Plan.md, with the user's decisions: still images, no automatic paging,
-// button "Intro"). Classic script, loaded after draft-11-map.js; works over file:// as well.
+// reports/2026-10-22 B46 Einführungskarte Plan/Plan.md, with the user's decisions: still images, no automatic paging,
+// button "Intro"). Classic script, loaded after scripts/map-page.js; works over file:// as well.
 // Opening rules:
 //   - ?intro=1 always opens the carousel, ?intro=0 never; ?intro=auto applies the normal rule (for tests).
 //   - Normal rule: open once the map is drawn (body[data-bereit="1"]) unless localStorage["e11-intro-hidden"] === "1".
@@ -10,7 +10,7 @@
 (function () {
   "use strict";
   const KEY = "e11-intro-hidden";
-  const IMG = "intro/";
+  const IMG = "data/intro/";
   // Texts of the cards (English only, like draft 11). Each statement was checked against the page (report of B46).
   const CARDS = [
     { title: "A map of mathematics", img: "card-1.png",

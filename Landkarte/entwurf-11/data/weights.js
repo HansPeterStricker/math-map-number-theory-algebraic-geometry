@@ -1,9 +1,9 @@
-// Own copy of Landkarte/scripts/bedeutung.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
+// Own copy of maps/shared_data/weights.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
 // for draft 12 do not change draft 11. Do not change this file.
-// B49: settings for the size of mountains and hill ranges in draft 8 (Landkarte/Alte Entwürfe/entwurf-8-zoom.html).
+// B49: settings for the size of mountains and hill ranges in draft 8 (maps/Alte Entwürfe/entwurf-8-zoom.html).
 //
 // Size of an element: s = sMin + (sMax - sMin) * x^p with x = (wa*a + wb*b + wc*c) / (sum of the weights of the
-// available scores). Every score lies in [0, 1]; computed in size-score.js.
+// available scores). Every score lies in [0, 1]; computed in scripts/size-score.js.
 //   a  data: percentile of the number of users within the group of the element (theorems, conjectures, theories).
 //      Theorems: direct users or all following theorems (`measure`: "nutzer" or "folgen"). Conjectures: theorems
 //      proved conditionally on them, plus partial results and equivalences. Theories: theorems whose proofs presuppose
@@ -11,7 +11,7 @@
 //      the graph says nothing about its importance ("count": a is the low percentile of the value 0).
 //   b  editorial: (level - 1) / 4 plus a bonus for an entry in a recognised list (Hilbert 1900, Landau 1912,
 //      Smale 1998, Millennium 2000) or a smaller bonus for another entry of the table of great theorems; at most 1.
-//   c  literature: score from bedeutung-literatur.js (window.SIZE_LITERATURE); ignored if the node has no entry.
+//   c  literature: score from weights-literature.js (window.SIZE_LITERATURE); ignored if the node has no entry.
 // `override` sets the size of a node directly (symbol size in map units, as s above).
 // Hill ranges (theories) keep the rule "larger name, larger symbol": their symbol follows the level of their name.
 //
@@ -23,7 +23,7 @@
 //   1  auxiliary statements, technical lemmas, very special single results
 // For theories the level measures the breadth of the theory.
 //
-// This file can be regenerated with the settings page (Landkarte/scripts/einstellungen.html, button "bedeutung.js
+// This file can be regenerated with the settings page (maps/tools/einstellungen.html, button "data/weights.js
 // herunterladen"); the downloaded file replaces this one.
 window.SIZE_SETTINGS = {
   weights: { a: 0.4, b: 0.4, c: 0.2 },

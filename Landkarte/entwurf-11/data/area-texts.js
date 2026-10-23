@@ -1,7 +1,7 @@
-// Own copy of Landkarte/scripts/area-texts.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
+// Own copy of maps/entwurf-10/data/area-texts.js for the frozen draft 11 (plan step N0, 22 October 2026), so that later changes
 // for draft 12 do not change draft 11. Do not change this file.
 // Short, generally understandable descriptions of the countries (MSC top-level classes) and provinces
-// (MSC classes with a letter) of the model in entwurf-7-modell.js (B40).
+// (MSC classes with a letter) of the model in regional-model.js (B40).
 // Each entry has a field `summary`: one or two German sentences, where possible with one well-known example.
 // The texts follow the MSC 2020 meaning of the class and what the map contains there.
 // The condominium 11G/14G (arithmetic geometry) has one text under the key "11G/14G".
