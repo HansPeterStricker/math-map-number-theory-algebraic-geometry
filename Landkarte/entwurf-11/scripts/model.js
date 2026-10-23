@@ -46,7 +46,7 @@
 // theory that the proof uses) is passed on unchanged.
 //
 // Language: names of countries and provinces, warnings and reasons for hiding are output via I18N.t
-// (English versions in sprache/ui-gemeinsam.js); without sprache.js (for instance in the Node script) they stay German.
+// (English versions in translations/ui-gemeinsam.js); without sprache.js (for instance in the Node script) they stay German.
 // sprache.js translates the theorem graphs before this script and keeps the German name in `name_de`. Nodes are
 // therefore merged via the German name, so that the result is the same in both languages.
 

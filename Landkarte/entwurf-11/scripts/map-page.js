@@ -2694,7 +2694,7 @@
   // shows the name of the country; a province (its name or its free ground) shows the country above, a little smaller
   // (both countries for the condominium), then the name of the province.
   const AT = window.AREA_TEXTS || { countries: {}, provinces: {} };
-  // Full names of the provinces whose name on the map was shortened (todo B69 e); translations in sprache/ui-gemeinsam.js
+  // Full names of the provinces whose name on the map was shortened (todo B69 e); translations in translations/ui-gemeinsam.js
   const PROVINCE_FULL = { "11M": "Zeta- und L-Funktionen: analytische Theorie", "11R": "Algebraische Zahlentheorie: globale Körper",
     "11S": "Algebraische Zahlentheorie: lokale Körper" };
   function areaCard(t) {

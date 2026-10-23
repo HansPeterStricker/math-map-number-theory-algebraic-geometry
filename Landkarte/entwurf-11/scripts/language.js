@@ -5,8 +5,8 @@
 // (localStorage), otherwise German. The switcher at the bottom left reloads the page with the other parameter.
 //
 // Translations:
-// - Data: window.EN_TEXTS = { <hash of the German text>: "English text" }, generated from sprache/arbeit/*.json
-//   (see sprache/README.md). I18N.data(obj) replaces, on loading, all texts of a data object whose hash is listed
+// - Data: window.EN_TEXTS = { <hash of the German text>: "English text" }, generated from translations/arbeit/*.json
+//   (see translations/README.md). I18N.data(obj) replaces, on loading, all texts of a data object whose hash is listed
 //   there. Fields with identifiers and codes (CODE_FIELDS) stay unchanged.
 // - Interface: window.EN_UI = { "German text": "English text", "#identifier": "English HTML" }.
 //   I18N.t("German text") returns the English version; on loading, elements with data-t="identifier" receive
@@ -15,7 +15,7 @@
 //   The page title is stored under EN_UI["#title"].
 // Missing translations stay German and are collected in I18N.missing (console: I18N.missing).
 //
-// Order of the scripts on a page: data files, sprache/en-alle.js, sprache/ui-*.js, sprache/sprache.js,
+// Order of the scripts on a page: data files, translations/en-alle.js, translations/ui-*.js, translations/sprache.js,
 // page code.
 // sprache.js translates the known data objects (DATA_OBJECTS) immediately on loading.
 

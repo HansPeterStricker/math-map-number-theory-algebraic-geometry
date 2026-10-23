@@ -12,7 +12,7 @@
     // Sources: CLAUDE.md (project idea, working title); counts from window.E11.symbols(): 312 theorems (kind berg),
     // 42 open conjectures (gipfel 38 + bedingt 4), 6 refuted conjectures (trugbild), 31 theories (gebaeude), 13 bridges;
     // countries and provinces: data/layout.js (62 provinces in 20 MSC main fields); glossary (GLOSSAR.md,
-    // sprache/GLOSSAR.md: area, subarea); scripts/intro.js, card 1 and 4.
+    // translations/GLOSSAR.md: area, subarea); scripts/intro.js, card 1 and 4.
     {
       q: "What is this map?",
       a: "<p>This map shows a part of mathematics as a landscape: number theory, algebraic geometry and some neighbouring " +
@@ -112,7 +112,7 @@
     },
     // Sources: scripts/intro.js, card 6 (contents of the info box); maps/entwurf-10/data/area-texts.js, header (descriptions of
     // areas and subareas, one well-known example), tests/test-area-hover.js (shown when hovering over a subarea);
-    // GLOSSAR.md (Kurzfassung, Formel) and CLAUDE.md (formulas without quantifiers, todo B26); sprache/README.md
+    // GLOSSAR.md (Kurzfassung, Formel) and CLAUDE.md (formulas without quantifiers, todo B26); translations/README.md
     // (data stay German and are translated to English); git log (every commit co-authored by Claude); daten.js headers
     // (years not checked).
     {
